@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c62iaue2x0big"]
+
+[ext_resource type="Script" path="res://cenas/menu.gd" id="1_78vvq"]
+[ext_resource type="FontFile" uid="uid://m2vktkm4qadx" path="res://texturas/interface/fonte/Lonely Cake.ttf" id="1_qv2xk"]
+[ext_resource type="StyleBox" uid="uid://g6qfw8jln4qk" path="res://estilos/botao.tres" id="2_mo67h"]
+[ext_resource type="AudioStream" uid="uid://0akybshsvgme" path="res://sons/click-a.ogg" id="4_qt8yb"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_78vvq")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 416.0
+offset_top = 246.0
+offset_right = 726.0
+offset_bottom = 310.0
+theme_override_fonts/font = ExtResource("1_qv2xk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("2_mo67h")
+theme_override_styles/hover = ExtResource("2_mo67h")
+theme_override_styles/pressed = ExtResource("2_mo67h")
+theme_override_styles/disabled = ExtResource("2_mo67h")
+text = "Host
+"
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_qt8yb")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

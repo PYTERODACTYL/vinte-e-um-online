@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://c62iaue2x0big"]
+
+[ext_resource type="Script" path="res://cenas/menu.gd" id="1_78vvq"]
+[ext_resource type="FontFile" uid="uid://m2vktkm4qadx" path="res://texturas/interface/fonte/Lonely Cake.ttf" id="1_qv2xk"]
+[ext_resource type="StyleBox" uid="uid://g6qfw8jln4qk" path="res://estilos/botao.tres" id="2_mo67h"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_78vvq")
+
+[node name="Servidor" type="Button" parent="."]
+offset_left = 401.0
+offset_top = 207.0
+offset_right = 711.0
+offset_bottom = 271.0
+theme_override_fonts/font = ExtResource("1_qv2xk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("2_mo67h")
+theme_override_styles/hover = ExtResource("2_mo67h")
+theme_override_styles/pressed = ExtResource("2_mo67h")
+theme_override_styles/disabled = ExtResource("2_mo67h")
+text = "Servidor"
+
+[node name="Cliente" type="Button" parent="."]
+offset_left = 405.0
+offset_top = 385.0
+offset_right = 715.0
+offset_bottom = 449.0
+theme_override_fonts/font = ExtResource("1_qv2xk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("2_mo67h")
+theme_override_styles/hover = ExtResource("2_mo67h")
+theme_override_styles/pressed = ExtResource("2_mo67h")
+theme_override_styles/disabled = ExtResource("2_mo67h")
+text = "Cliente"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 377.0
+offset_top = 305.0
+offset_right = 733.0
+offset_bottom = 336.0
+placeholder_text = "Coloque o IP aqui"
+
+[connection signal="pressed" from="Servidor" to="." method="_on_servidor_pressed"]
+[connection signal="pressed" from="Servidor" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Cliente" to="." method="_on_cliente_pressed"]
+[connection signal="pressed" from="Cliente" to="." method="_on_button_pressed"]
+[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]

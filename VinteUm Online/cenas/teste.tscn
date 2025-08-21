@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqul8q0dxiefv"]
+
+[ext_resource type="Script" path="res://cenas/servidor.gd" id="1_nxykg"]
+[ext_resource type="Texture2D" uid="uid://dvd71g202wath" path="res://texturas/interface/icones/pawn.png" id="2_hjty0"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_nxykg")
+
+[node name="Jogador1" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_top = 512.0
+offset_right = 130.0
+offset_bottom = 640.0
+texture = ExtResource("2_hjty0")
+
+[node name="Jogador2" type="TextureRect" parent="."]
+offset_left = 1020.0
+offset_top = 510.0
+offset_right = 1148.0
+offset_bottom = 638.0
+texture = ExtResource("2_hjty0")

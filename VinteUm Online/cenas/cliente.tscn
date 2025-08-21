@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=3 uid="uid://tln58tlomlxh"]
+
+[ext_resource type="Script" path="res://cenas/Cliente.gd" id="1_25rnv"]
+[ext_resource type="FontFile" uid="uid://m2vktkm4qadx" path="res://texturas/interface/fonte/Lonely Cake.ttf" id="2_n8n46"]
+[ext_resource type="StyleBox" uid="uid://g6qfw8jln4qk" path="res://estilos/botao.tres" id="3_milge"]
+
+[node name="Cliente" type="Node2D"]
+script = ExtResource("1_25rnv")
+
+[node name="Pronto" type="Button" parent="."]
+offset_left = 361.0
+offset_top = 318.0
+offset_right = 757.0
+offset_bottom = 397.0
+theme_override_fonts/font = ExtResource("2_n8n46")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_milge")
+text = "Pronto!"
+
+[node name="RequestCard" type="Button" parent="."]
+offset_left = 33.0
+offset_top = 528.0
+offset_right = 429.0
+offset_bottom = 607.0
+theme_override_fonts/font = ExtResource("2_n8n46")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_milge")
+text = "Pedir carta"
+
+[node name="StopTurn" type="Button" parent="."]
+offset_left = 710.0
+offset_top = 530.0
+offset_right = 1106.0
+offset_bottom = 609.0
+theme_override_fonts/font = ExtResource("2_n8n46")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_milge")
+text = "Passar"
+
+[node name="HandContainer" type="HBoxContainer" parent="."]
+offset_left = 88.0
+offset_top = 159.0
+offset_right = 1049.0
+offset_bottom = 310.0
+
+[node name="Resultado" type="Label" parent="."]
+offset_left = 364.0
+offset_top = 48.0
+offset_right = 780.0
+offset_bottom = 151.0
+theme_override_fonts/font = ExtResource("2_n8n46")
+theme_override_font_sizes/font_size = 40
+
+[node name="EndGame" type="Label" parent="."]
+offset_left = 400.0
+offset_top = 320.0
+offset_right = 714.0
+offset_bottom = 394.0
+theme_override_fonts/font = ExtResource("2_n8n46")
+theme_override_font_sizes/font_size = 40
+
+[node name="Sim" type="Button" parent="."]
+offset_left = 261.0
+offset_top = 432.0
+offset_right = 459.0
+offset_bottom = 510.0
+theme_override_fonts/font = ExtResource("2_n8n46")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_milge")
+text = "Sim
+"
+
+[node name="Nao" type="Button" parent="."]
+offset_left = 663.0
+offset_top = 430.0
+offset_right = 885.0
+offset_bottom = 511.0
+theme_override_fonts/font = ExtResource("2_n8n46")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_milge")
+text = "Nao
+"
+
+[connection signal="pressed" from="Pronto" to="." method="_on_pronto_pressed"]
+[connection signal="pressed" from="RequestCard" to="." method="_on_request_card_pressed"]
+[connection signal="pressed" from="StopTurn" to="." method="_on_stop_turn_pressed"]
+[connection signal="pressed" from="Sim" to="." method="_on_sim_pressed"]
+[connection signal="pressed" from="Nao" to="." method="_on_nao_pressed"]
